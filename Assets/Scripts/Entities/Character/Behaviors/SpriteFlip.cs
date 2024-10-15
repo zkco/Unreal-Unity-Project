@@ -7,15 +7,11 @@ public class SpriteFlip : MonoBehaviour
 {
     private CharaController controller;
 
-    private SpriteRenderer charaRenderer;
-    private BoxCollider2D charaCollider;
-
+   
     private void Awake()
     {
         controller = GetComponent<CharaController>();
 
-        charaRenderer = GetComponentInChildren<SpriteRenderer>();
-        charaCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Start()
@@ -25,10 +21,9 @@ public class SpriteFlip : MonoBehaviour
 
     private void FlipSprite(Vector2 direction)
     {
-        if(direction.x <0)
+        if (direction.x < 0)
         {
-            charaRenderer.flipX = true;
-            charaCollider.offset = new Vector2 (-charaCollider.offset.x,charaCollider.offset.y);
+            transform.localScale = new Vector3(-1,1,1);
         }
     }
 }
