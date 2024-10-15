@@ -44,13 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9a0e33638ec344b874730863fb0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pools:
-  - tag: Bullet
-    prefab: {fileID: 0}
-    size: 20
-  - tag: Enemy
-    prefab: {fileID: 0}
-    size: 10
-  - tag: Enemy
-    prefab: {fileID: 0}
-    size: 10
+  pools: []

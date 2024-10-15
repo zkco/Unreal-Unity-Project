@@ -15,7 +15,6 @@ public class CharaMovement : MonoBehaviour
     {
         charaRigidbody = GetComponent<Rigidbody2D>();
         controller = GetComponent<PlayerController>();
-        stat = GetComponent<PlayerStat>();
     }
 
     private void Start()
