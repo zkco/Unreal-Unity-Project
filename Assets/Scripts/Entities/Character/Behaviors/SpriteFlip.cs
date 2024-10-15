@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpriteFlip : MonoBehaviour
+{
+    private CharaController controller;
+
+   
+    private void Awake()
+    {
+        controller = GetComponent<CharaController>();
+
+    }
+
+    private void Start()
+    {
+        controller.OnMoveEvent += FlipSprite;
+    }
+
+    private void FlipSprite(Vector2 direction)
+    {
+        if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(-1,1,1);
+        }
+    }
+}
