@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class CharaMovement : MonoBehaviour
 {
+    [SerializeField] private PlayerStat stat;
     private Rigidbody2D charaRigidbody;
-    private CharaController controller;
+    private PlayerController controller;
 
     private Vector2 movementDirection = Vector2.zero;
 
     private void Awake()
     {
         charaRigidbody = GetComponent<Rigidbody2D>();
-        controller = GetComponent<CharaController>();
+        controller = GetComponent<PlayerController>();
     }
 
     private void Start()
@@ -34,7 +35,7 @@ public class CharaMovement : MonoBehaviour
     private void ApplyMovement(Vector2 direction)
     {
         // 캐릭터 스피드 적용할 예정
-        direction = direction * 2f;
+        direction = direction * stat.Speed;
 
         charaRigidbody.velocity = direction;
     }
