@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -9,6 +10,19 @@ public class GameController : MonoBehaviour
     public event Action<Vector2> OnLookEvent;
     public event Action OnFireEvent;
     public event Action OnAimEvent;
+
+    protected bool _nowAttacking = false;
+    protected bool _nowAiming = false;
+
+    protected virtual void Awake()
+    {
+
+    }
+
+    private void Update()
+    {
+        
+    }
 
     public void CallMoveEvent(Vector2 direction)
     {
@@ -20,7 +34,7 @@ public class GameController : MonoBehaviour
         OnLookEvent.Invoke(direction);
     }
 
-    public void CallFireEvenet()
+    public void CallFireEvent()
     {
         OnFireEvent.Invoke();
     }
@@ -29,4 +43,5 @@ public class GameController : MonoBehaviour
     {
         OnAimEvent.Invoke();
     }
+
 }

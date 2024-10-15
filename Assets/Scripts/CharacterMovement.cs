@@ -21,6 +21,11 @@ public class CharacterMovement : MonoBehaviour
         _gameController.OnMoveEvent += Move;
     }
 
+    private void FixedUpdate()
+    {
+        MoveToDirection(_moveDirection);
+    }
+
     private void Move(Vector2 direction)
     {
         _moveDirection = direction;
@@ -30,6 +35,5 @@ public class CharacterMovement : MonoBehaviour
     {
         direction = direction * 5; //TODO : Ä³¸¯ÅÍ speed ½ºÅÈÀ» °¡Á®¿Í °öÇØÁÜ
         _characterRB.velocity = direction;
-
     }
 }
