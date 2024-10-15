@@ -6,14 +6,14 @@ using UnityEngine;
 public class CharaMovement : MonoBehaviour
 {
     private Rigidbody2D charaRigidbody;
-    private PlayerController controller;
+    private CharaController controller;
 
     private Vector2 movementDirection = Vector2.zero;
 
     private void Awake()
     {
         charaRigidbody = GetComponent<Rigidbody2D>();
-        controller = GetComponent<PlayerController>();
+        controller = GetComponent<CharaController>();
     }
 
     private void Start()
