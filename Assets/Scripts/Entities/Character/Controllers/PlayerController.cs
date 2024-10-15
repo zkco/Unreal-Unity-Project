@@ -26,7 +26,7 @@ public class PlayerController : CharaController
         CallOnAimEvent(lookDirection);
     }
 
-    private void OnFire()
+    private void OnFire(InputValue inputValue)
     {
 
     }
