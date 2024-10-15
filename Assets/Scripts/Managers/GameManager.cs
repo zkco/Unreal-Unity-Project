@@ -6,15 +6,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public ObjectPool BulletPool;
-    public ObjectPool EnemyPool;
+    public ObjectPool objectPool;
 
     private void Awake()
     {
         if(Instance != null) Destroy(gameObject);
         Instance = this;
 
-        BulletPool = new ObjectPool();
-        EnemyPool = new ObjectPool();
+        objectPool = GetComponent<ObjectPool>();
     }
 }
