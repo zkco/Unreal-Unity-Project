@@ -6,4 +6,8 @@ public class CharaStatSO : ScriptableObject
     [Header("Character Info")]
     public float CharaSpeed;
     public LayerMask target;
+
+    [Header("Attack Info")]
+    public string bulletNameTag;
+    public float attackSpeed;
 }
