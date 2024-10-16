@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Managers/DataManager.cs.meta
 guid: e99474dd9f4d41a4c80faace09201aa7
+========
+guid: aab0849eb8223c5488ba4004cb8f7a06
+>>>>>>>> Dev:Assets/Scripts/Entities/Character/Behaviors/CharaStatHandler.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

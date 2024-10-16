@@ -9,4 +9,5 @@ public class CharacterDefaultStat : ScriptableObject
     public int HP;
     public int MaxHP;
     public float Speed;
+    public float ShootDelay;
 }
