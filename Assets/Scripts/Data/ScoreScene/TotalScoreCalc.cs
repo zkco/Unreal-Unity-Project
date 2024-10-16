@@ -12,14 +12,21 @@ public class TotalScoreCalc : MonoBehaviour
     [SerializeField] private TMP_Text _tmpTotalScore;
     [SerializeField] private GameObject RetryPanel;
 
+
+    private ScoreCalc _mainSceneScore;
+    private TimeCalc _mainSceneTime;
+
     //TODO : 점수를 받아와 표시할 변수 추가
-    private int _time = 200;
-    private int _score = 100;
-    private int _totalScore = 0;
+    private int _time;
+    private int _score;
+    private int _totalScore;
 
 
     private void Start()
     {
+        _time = (int)_mainSceneTime._time;
+        _score = _mainSceneScore.Score;
+
         _tmpTime.text = _time.ToString();
         _tmpScore.text = _score.ToString();
         StartCalculation();
@@ -44,7 +51,7 @@ public class TotalScoreCalc : MonoBehaviour
         {
             for(; _time > 0; _time--)
             {
-                _totalScore++;
+                _totalScore += 3;
                 yield return new WaitForSeconds(0.02f);
             }
         }
