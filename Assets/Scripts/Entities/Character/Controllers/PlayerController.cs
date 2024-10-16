@@ -28,6 +28,6 @@ public class PlayerController : CharaController
 
     private void OnFire(InputValue inputValue)
     {
-
+        IsFiring = inputValue.isPressed;
     }
 }

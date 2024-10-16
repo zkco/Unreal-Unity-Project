@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Outlaw override
+  m_Controller: {fileID: 9100000, guid: 9e05f23e82be70c4dae3cc2ee3a7c7b7, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 2d19c3e97da40824ca60d0dc0a24778f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 367a11182c8bc6643b500ab9495b97fd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0cfd9ec2013104f41938328b3dcb4d7a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 533fe0e02f9785c439a7e9ebe5d52dab, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3008cf5eba3890946afa6051a56dee59, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9726aa6beeaa9cf4fb18c788906d90af, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 35c55879dbf283f42a09d27df044878b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f1348406f818aec468ec576d44653d8f, type: 2}

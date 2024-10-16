@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class CharaController : MonoBehaviour
@@ -8,6 +9,29 @@ public class CharaController : MonoBehaviour
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnAimEvent;
     public event Action OnFireEvent;
+
+    private float timeSinceLastAttack = float.MaxValue;
+    protected bool IsFiring { get; set; }
+
+    protected virtual void Update()
+    {
+        HandleAttackDelay();
+    }
+
+    private void HandleAttackDelay()
+    {
+        if (timeSinceLastAttack <= 1f)
+        {
+            timeSinceLastAttack += Time.deltaTime;
+        }
+
+        if (IsFiring && timeSinceLastAttack > 1f)
+        {
+            timeSinceLastAttack = 0;
+            CallOnFireEvent();
+        }
+    }
+
 
     protected void CallOnMoveEvent(Vector2 vector2)
     {
