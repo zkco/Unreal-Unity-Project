@@ -395,6 +395,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1473812795237965706, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
+      propertyPath: m_Size.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473812795237965706, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2764468703993056476, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -435,9 +443,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3254903045498978886, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353876747116990350, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007324100065109969, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
+      propertyPath: m_Size.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446891758373150328, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6696986547366570628, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
       propertyPath: m_Name
       value: BulletRemover
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832819466354964640, guid: a51df88ffb5060649a847bb39e6f6e96, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
