@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c42f059711f56643bebe1b9b9238d65, type: 3}
   m_Name: OutlawDefaultStat
   m_EditorClassIdentifier: 
-  HP: 0
-  MaxHP: 0
+  HP: 1
+  MaxHP: 1
   Speed: 2
   ShootDelay: 2

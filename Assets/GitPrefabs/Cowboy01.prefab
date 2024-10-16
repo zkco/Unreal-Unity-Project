@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 8674191032183826022}
   - component: {fileID: 6009108278833269829}
   - component: {fileID: 6866738470670738794}
+  - component: {fileID: 1115550570134424336}
   m_Layer: 6
   m_Name: Cowboy01
   m_TagString: Player
@@ -323,6 +324,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 7991161885638776444}
+--- !u!114 &1115550570134424336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4972078127995427375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4522d66add055dc4b92c63fc74be48e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: 04647adb7c442d6489361281b7d5f563, type: 2}
 --- !u!1 &5341808802133264353
 GameObject:
   m_ObjectHideFlags: 0
