@@ -20,12 +20,12 @@ public class CharaController : MonoBehaviour
 
     private void HandleAttackDelay()
     {
-        if (timeSinceLastAttack <= 0.3f)
+        if (timeSinceLastAttack <= 0.2f)
         {
             timeSinceLastAttack += Time.deltaTime;
         }
 
-        if (IsFiring && timeSinceLastAttack > 0.3f)
+        if (IsFiring && timeSinceLastAttack > 0.2f)
         {
             timeSinceLastAttack = 0;
             CallOnFireEvent();
