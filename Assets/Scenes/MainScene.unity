@@ -272,11 +272,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
---- !u!4 &825372656 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8286668644810366895, guid: d30379cb73d758646b4c911aaf9f62a0, type: 3}
-  m_PrefabInstance: {fileID: 857257997}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &857257997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,14 +320,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4481540354451798181, guid: d30379cb73d758646b4c911aaf9f62a0, type: 3}
-      propertyPath: Prefab
-      value: 
-      objectReference: {fileID: 1150607320456218778, guid: 1ffaecb085626ee4bab5ae29f80218f8, type: 3}
-    - target: {fileID: 4481540354451798181, guid: d30379cb73d758646b4c911aaf9f62a0, type: 3}
-      propertyPath: bulletSpawnPoint
-      value: 
-      objectReference: {fileID: 825372656}
     - target: {fileID: 9211864991512264667, guid: d30379cb73d758646b4c911aaf9f62a0, type: 3}
       propertyPath: m_Name
       value: Outlaw
@@ -389,14 +376,6 @@ PrefabInstance:
     - target: {fileID: 5510930146118114463, guid: b9938403aaea2854b8c1c8c72750526e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8690738055149690208, guid: b9938403aaea2854b8c1c8c72750526e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8690738055149690208, guid: b9938403aaea2854b8c1c8c72750526e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 9085373399674270742, guid: b9938403aaea2854b8c1c8c72750526e, type: 3}
       propertyPath: m_Name

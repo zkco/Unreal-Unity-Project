@@ -13,19 +13,26 @@ public class CharaController : MonoBehaviour
     private float timeSinceLastAttack = float.MaxValue;
     protected bool IsFiring { get; set; }
 
-    protected virtual void Update()
+    protected CharaStatHandler stats;
+
+    protected virtual void Awake()
     {
-        HandleAttackDelay();
+        stats = GetComponent<CharaStatHandler>();
     }
 
-    private void HandleAttackDelay()
+    protected virtual void Update()
     {
-        if (timeSinceLastAttack <= 0.2f)
+        HandleShootDelay();
+    }
+
+    private void HandleShootDelay()
+    {
+        if (timeSinceLastAttack <= stats.stat.ShootDelay)
         {
             timeSinceLastAttack += Time.deltaTime;
         }
 
-        if (IsFiring && timeSinceLastAttack > 0.2f)
+        if (IsFiring && timeSinceLastAttack > stats.stat.ShootDelay)
         {
             timeSinceLastAttack = 0;
             CallOnFireEvent();

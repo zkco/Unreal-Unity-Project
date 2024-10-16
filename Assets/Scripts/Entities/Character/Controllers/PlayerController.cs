@@ -7,8 +7,10 @@ public class PlayerController : CharaController
 
     [SerializeField]private Transform bulletSpawnPoint;
 
-    private void Awake()
+
+    protected override void Awake()
     {
+        base.Awake();
         _camera = Camera.main;
     }
 

@@ -132,8 +132,8 @@ Transform:
   m_GameObject: {fileID: 8746228720647165582}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.05, z: 1}
+  m_LocalPosition: {x: 0.25, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6193482117189859397}
@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 4860807348463339615}
   - component: {fileID: 7525867280438223484}
   - component: {fileID: 7232334665336523603}
+  - component: {fileID: 2756767922833552358}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -390,7 +391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af3828abafb4ea4a85decb6eee03d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stat: {fileID: 11400000, guid: 04647adb7c442d6489361281b7d5f563, type: 2}
 --- !u!114 &4860807348463339615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,3 +430,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 6193482117189859397}
+--- !u!114 &2756767922833552358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085373399674270742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab0849eb8223c5488ba4004cb8f7a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: 04647adb7c442d6489361281b7d5f563, type: 2}
