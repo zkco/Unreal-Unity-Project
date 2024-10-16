@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 5171607471682114751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -1.07, z: 0}
+  m_LocalPosition: {x: -7.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -274,11 +274,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5171607471682114751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78cf0d787722faf4487ea2eb76f3b6ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 74357e3857d53044ab47dd2093effb1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 5972225644821685174}
-  Prefab: {fileID: 1150607320456218778, guid: 1ffaecb085626ee4bab5ae29f80218f8, type: 3}
 --- !u!114 &1990167094918591087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,10 +287,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5171607471682114751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e162aad10b43f4d8f7e82eb060af85, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f119e87ed481464789f66389de031f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 5972225644821685174}
+  Prefab: {fileID: 1150607320456218778, guid: 1ffaecb085626ee4bab5ae29f80218f8, type: 3}
 --- !u!114 &1033320592426549057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5171607471682114751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab0849eb8223c5488ba4004cb8f7a06, type: 3}
+  m_Script: {fileID: 11500000, guid: 4522d66add055dc4b92c63fc74be48e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: 04647adb7c442d6489361281b7d5f563, type: 2}

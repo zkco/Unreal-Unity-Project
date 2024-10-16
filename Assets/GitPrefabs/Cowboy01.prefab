@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 8674191032183826022}
   - component: {fileID: 6009108278833269829}
   - component: {fileID: 6866738470670738794}
-  - component: {fileID: 2114411022434000351}
   m_Layer: 6
   m_Name: Cowboy01
   m_TagString: Player
@@ -150,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 4972078127995427375}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 2.08, z: 0}
+  m_LocalPosition: {x: -7.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -306,7 +305,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4972078127995427375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78cf0d787722faf4487ea2eb76f3b6ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f119e87ed481464789f66389de031f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 7991161885638776444}
@@ -320,23 +319,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4972078127995427375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e162aad10b43f4d8f7e82eb060af85, type: 3}
+  m_Script: {fileID: 11500000, guid: 74357e3857d53044ab47dd2093effb1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 7991161885638776444}
---- !u!114 &2114411022434000351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4972078127995427375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab0849eb8223c5488ba4004cb8f7a06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stat: {fileID: 11400000, guid: 04647adb7c442d6489361281b7d5f563, type: 2}
 --- !u!1 &5341808802133264353
 GameObject:
   m_ObjectHideFlags: 0
