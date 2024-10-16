@@ -307,7 +307,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9211864991512264667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78cf0d787722faf4487ea2eb76f3b6ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f119e87ed481464789f66389de031f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 8286668644810366895}
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9211864991512264667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab0849eb8223c5488ba4004cb8f7a06, type: 3}
+  m_Script: {fileID: 11500000, guid: 4522d66add055dc4b92c63fc74be48e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: 4023012a7b1984648a369115a865b229, type: 2}
