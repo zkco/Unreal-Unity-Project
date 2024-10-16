@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 0
   MaxHP: 0
-  Speed: 0
-  ShootDelay: 0
-  score: 0
+  Speed: 2
+  ShootDelay: 2
+  score: 100

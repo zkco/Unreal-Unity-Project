@@ -4,22 +4,16 @@ using UnityEngine;
 public class TimeCalc : MonoBehaviour
 {
     [SerializeField] private TMP_Text _timeTMP;
-    private int _time;
+    public float _time;
 
     private void Start()
     {
         _time = 0;
-        Time.timeScale = Time.deltaTime;
     }
 
     private void Update()
     {
-        _time++;
-        _timeTMP.text = _time.ToString();
-    }
-
-    private void TimeIncrease()
-    {
-        _time = (int)Time.deltaTime;
+        _time += Time.deltaTime;
+        _timeTMP.text = ((int)_time).ToString();
     }
 }
