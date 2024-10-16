@@ -5,8 +5,12 @@ public class PlayerController : CharaController
 {
     private Camera _camera;
 
-    private void Awake()
+    [SerializeField]private Transform bulletSpawnPoint;
+
+
+    protected override void Awake()
     {
+        base.Awake();
         _camera = Camera.main;
     }
 
@@ -21,13 +25,13 @@ public class PlayerController : CharaController
     {
         Vector2 mousePos = inputValue.Get<Vector2>();
         Vector2 worldPos = _camera.ScreenToWorldPoint(mousePos);
-        Vector2 lookDirection = (worldPos - (Vector2)transform.position).normalized;
+        Vector2 lookDirection = (worldPos - (Vector2)bulletSpawnPoint.position).normalized;
 
         CallOnAimEvent(lookDirection);
     }
 
     private void OnFire(InputValue inputValue)
     {
-
+        IsFiring = inputValue.isPressed;
     }
 }

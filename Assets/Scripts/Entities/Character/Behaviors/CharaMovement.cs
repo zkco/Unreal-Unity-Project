@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class CharaMovement : MonoBehaviour
 {
-    [SerializeField] private PlayerStat stat;
     private Rigidbody2D charaRigidbody;
     private CharaController controller;
+    private CharaStatHandler stats;
 
     private Vector2 movementDirection = Vector2.zero;
 
@@ -15,6 +15,7 @@ public class CharaMovement : MonoBehaviour
     {
         charaRigidbody = GetComponent<Rigidbody2D>();
         controller = GetComponent<CharaController>();
+        stats = GetComponent<CharaStatHandler>();
     }
 
     private void Start()
@@ -35,7 +36,7 @@ public class CharaMovement : MonoBehaviour
     private void ApplyMovement(Vector2 direction)
     {
         // 캐릭터 스피드 적용할 예정
-        direction = direction * stat.Speed;
+        direction = direction * stats.stat.Speed;
 
         charaRigidbody.velocity = direction;
     }
