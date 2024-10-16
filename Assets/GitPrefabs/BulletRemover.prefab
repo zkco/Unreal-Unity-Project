@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18, y: 0.5}
+  m_Size: {x: 20, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &5876575953074879796
 GameObject:
@@ -152,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18, y: 0.5}
+  m_Size: {x: 20, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &6696986547366570628
 GameObject:
@@ -184,9 +184,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3254903045498978886}
+  - {fileID: 3353876747116990350}
   - {fileID: 8914976152168400764}
   - {fileID: 526979555444429746}
-  - {fileID: 3353876747116990350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6735161216116696175
