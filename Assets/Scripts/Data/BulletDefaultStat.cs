@@ -9,5 +9,6 @@ public class BulletDefaultStat : ScriptableObject
     public float Delay;
     public int Damage;
     public float Size;
-    public Quaternion Spread;
+    public float Spread;
+    public int NumberOfProjectiles;
 }
