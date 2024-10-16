@@ -235,9 +235,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8989171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2572cdacd81e7b74eb84db3d23dbe7d5, type: 3}
+  m_Script: {fileID: 11500000, guid: bf9ef882290963d49bb116d937d80c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 2
 --- !u!1 &90750304
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,8 +323,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8989176}
-        m_TargetAssemblyTypeName: SingleBtn, Assembly-CSharp
-        m_MethodName: CharacterSelectScene
+        m_TargetAssemblyTypeName: SceneMoveButton, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -729,9 +730,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1066524308}
-        m_TargetAssemblyTypeName: SingleBtn, Assembly-CSharp
-        m_MethodName: CharacterSelectScene
+      - m_Target: {fileID: 1066524313}
+        m_TargetAssemblyTypeName: SceneMoveButton, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -791,7 +792,7 @@ GameObject:
   - component: {fileID: 1066524311}
   - component: {fileID: 1066524310}
   - component: {fileID: 1066524309}
-  - component: {fileID: 1066524308}
+  - component: {fileID: 1066524313}
   m_Layer: 5
   m_Name: MulteBtn
   m_TagString: Untagged
@@ -799,18 +800,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1066524308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066524307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2572cdacd81e7b74eb84db3d23dbe7d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1066524309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,6 +883,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1066524313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066524307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9ef882290963d49bb116d937d80c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 2
 --- !u!1 &1181199652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,9 +1300,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1870703719}
-        m_TargetAssemblyTypeName: ScoreBtn, Assembly-CSharp
-        m_MethodName: ScoreScene
+      - m_Target: {fileID: 1870703724}
+        m_TargetAssemblyTypeName: SceneMoveButton, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1493,7 +1495,7 @@ GameObject:
   - component: {fileID: 1870703722}
   - component: {fileID: 1870703721}
   - component: {fileID: 1870703720}
-  - component: {fileID: 1870703719}
+  - component: {fileID: 1870703724}
   m_Layer: 5
   m_Name: HighScroeBtn
   m_TagString: Untagged
@@ -1501,18 +1503,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1870703719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870703718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b19a28dbac46764e9175cd7a679c9e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1870703720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,6 +1586,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1870703724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870703718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9ef882290963d49bb116d937d80c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 4
 --- !u!1 &2095570730
 GameObject:
   m_ObjectHideFlags: 0
