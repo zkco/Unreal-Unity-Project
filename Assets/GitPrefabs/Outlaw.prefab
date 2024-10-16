@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8286668644810366895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2760230597688151412}
   - component: {fileID: 8781543935620523209}
   - component: {fileID: 7136225521269519271}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,9 +154,9 @@ GameObject:
   - component: {fileID: 1505412187872338}
   - component: {fileID: 4481540354451798181}
   - component: {fileID: 4718654251946714319}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Outlaw
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
