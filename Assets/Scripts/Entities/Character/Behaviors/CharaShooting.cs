@@ -27,9 +27,9 @@ public class CharaShooting : MonoBehaviour
 
     private void CreateBullet()
     {
-        GameObject obj = GameManager.Instance.objectPool.SpawningPool("Bullet");
+        //GameObject obj = GameManager.Instance.objectPool.SpawningPool("Bullet");
 
-        obj.transform.position = bulletSpawnPoint.position;
-        // Instantiate(Prefab, bulletSpawnPoint.position, Quaternion.identity);
+        //obj.transform.position = bulletSpawnPoint.position;
+        Instantiate(Prefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
     }
 }
