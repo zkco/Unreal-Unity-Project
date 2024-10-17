@@ -27,7 +27,6 @@ public class EnemyShooting : MonoBehaviour
 
     private void CreateBullet()
     {
-        
         GameObject newBullet = Instantiate<GameObject>(Prefab);
         newBullet.transform.position = transform.position + new Vector3(0,-0.5f);
         newBullet.GetComponent<Bullet>().Direction = new Vector2(-1, 0);

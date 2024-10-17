@@ -8,7 +8,7 @@ public class CharaShooting : MonoBehaviour
     [SerializeField] private Transform bulletSpawnPoint;
     private Vector2 aimeDirection = Vector2.right;
 
-    public GameObject Prefab;
+    // public GameObject Prefab;
 
     private void Awake()
     {
@@ -27,12 +27,10 @@ public class CharaShooting : MonoBehaviour
 
     private void CreateBullet()
     {
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        worldPosition.z = 0;
-        worldPosition -= (transform.position + new Vector3(0, -0.5f));
+        GameObject obj = GameManager.Instance.objectPool.SpawningPool("Bullet");
 
-        GameObject newBullet = Instantiate<GameObject>(Prefab);
-        newBullet.transform.position = transform.position + new Vector3(0,-0.5f);
-        newBullet.GetComponent<Bullet>().Direction = worldPosition;
+        obj.transform.position = bulletSpawnPoint.position;
+        obj.transform.rotation = bulletSpawnPoint.rotation;
+        obj.GetComponent<Bullet>().Direction = Vector2.right;
     }
 }
