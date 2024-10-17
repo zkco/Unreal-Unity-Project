@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ObjectDefaultBehavior : MonoBehaviour
+public class ObjectDefaultStatHandler: MonoBehaviour
 {
     [SerializeField] private ObjectDefaultStat baseStat;
     public ObjectDefaultStat currentStat { get; private set; }
