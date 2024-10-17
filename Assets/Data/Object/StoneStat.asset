@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: StoneStat
   m_EditorClassIdentifier: 
   ObjectTag: 
-  HP: 0
+  HP: 10
+  delay: 5

@@ -6,4 +6,5 @@ public class ObjectDefaultStat : ScriptableObject
     [Header("Object Default Stat")] //장애물(엄폐물)
     public string ObjectTag;
     public int HP;
+    public float delay;
 }
