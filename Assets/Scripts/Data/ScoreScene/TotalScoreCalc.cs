@@ -11,7 +11,8 @@ public class TotalScoreCalc : MonoBehaviour
     [SerializeField] private TMP_Text _tmpScore;
     [SerializeField] private TMP_Text _tmpTotalScore;
     [SerializeField] private GameObject RetryPanel;
-    private readonly WaitForSeconds WaitFor2Seconds = new WaitForSeconds(2f);
+    private readonly WaitForSeconds WaitFor3Seconds = new WaitForSeconds(3f);
+    private readonly WaitForSeconds WaitForFewSeconds = new WaitForSeconds(0.02f);
 
     //TODO : 점수를 받아와 표시할 변수 추가
     private int _time;
@@ -52,25 +53,25 @@ public class TotalScoreCalc : MonoBehaviour
 
     private IEnumerator TimeCalcTotalScore()
     {
-        yield return new WaitForSeconds(3f);
+        yield return WaitFor3Seconds;
         if (_time > 0)
         {
             for(; _time > 0; _time--)
             {
                 _totalScore += 3;
-                yield return WaitFor2Seconds;
+                yield return WaitForFewSeconds;
             }
         }
     }
     private IEnumerator ScoreCalcTotalScore()
     {
-        yield return new WaitForSeconds(3f);
+        yield return WaitFor3Seconds;
         if (_score > 0)
         {
             for (; _score > 0; _score--)
             {
                 _totalScore++;
-                yield return WaitFor2Seconds;
+                yield return WaitForFewSeconds;
             }
         }
     }
