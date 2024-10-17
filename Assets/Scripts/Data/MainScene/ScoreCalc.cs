@@ -13,6 +13,6 @@ public class ScoreCalc : MonoBehaviour
 
     private void Update()
     {
-        _scoreTMP.text = $"Score : { Score}";
+        _scoreTMP.text = $"Score : {Score}";
     }
 }
