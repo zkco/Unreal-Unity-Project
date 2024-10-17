@@ -7,11 +7,20 @@ public class PlayerController : CharaController
 
     [SerializeField]private Transform bulletSpawnPoint;
 
+    private Vector2 worldPos;
+
 
     protected override void Awake()
     {
         base.Awake();
         _camera = Camera.main;
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+
+        CallOnAimEvent(worldPos);
     }
 
     private void OnMove(InputValue inputValue)
@@ -24,10 +33,10 @@ public class PlayerController : CharaController
     private void OnAim(InputValue inputValue)
     {
         Vector2 mousePos = inputValue.Get<Vector2>();
-        Vector2 worldPos = _camera.ScreenToWorldPoint(mousePos);
-        Vector2 lookDirection = (worldPos - (Vector2)bulletSpawnPoint.position).normalized;
+        worldPos = _camera.ScreenToWorldPoint(mousePos);
+        //Vector2 lookDirection = (worldPos - (Vector2)bulletSpawnPoint.position).normalized;
 
-        CallOnAimEvent(lookDirection);
+        //CallOnAimEvent(worldPos);
     }
 
     private void OnFire(InputValue inputValue)

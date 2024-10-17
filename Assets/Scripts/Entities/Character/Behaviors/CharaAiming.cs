@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharaAiming : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class CharaAiming : MonoBehaviour
 
     private void RotateAim(Vector2 vector)
     {
-        float rotZ = Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg;
+        Vector2 direction = (vector - (Vector2)bulletSpawnPoint.position);
+        float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         if (Mathf.Abs(rotZ) <= 90)
         {
