@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerDefaultStat
   m_EditorClassIdentifier: 
   HP: 1
-  MaxHP: 1
+  MaxHP: 5
   Speed: 5
   ShootDelay: 0.3

@@ -20,7 +20,7 @@ public class SpriteFlip : MonoBehaviour
 
     private void FlipSprite(Vector2 direction)
     {
-        if (direction.x < 0)
+        if (direction.x <= 0)
         {
             transform.rotation = Quaternion.Euler(0, 180f, 0);
         }

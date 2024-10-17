@@ -13,6 +13,7 @@ public class CharaDeath : MonoBehaviour
         healthController = GetComponent<CharaHealthController>();
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void Start()
     {
         healthController.OnDeath += OnDeath;

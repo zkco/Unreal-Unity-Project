@@ -10,6 +10,7 @@ public class CharaHealthController : MonoBehaviour
     // private bool isAttacked = false;
 
     public event Action OnDeath;
+    public event Action OnDamage;
 
     public float CurrentHP {  get; private set; }
 
@@ -27,11 +28,24 @@ public class CharaHealthController : MonoBehaviour
 
     public bool ChangeHealth(float change)
     {
+        CurrentHP += change;
+        CurrentHP = Mathf.Clamp(CurrentHP, 0, MaxHP);
+
         if(CurrentHP<=0f)
         {
             CallDeath();
             return true;
         }
+
+        if(change>=0)
+        {
+
+        }
+        else
+        {
+            OnDamage?.Invoke();
+        }
+
         return true;
     }
 

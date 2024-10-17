@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 7141886173911743832, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
       propertyPath: pools.Array.data[1].prefab
       value: 
-      objectReference: {fileID: 1150607320456218778, guid: 1ffaecb085626ee4bab5ae29f80218f8, type: 3}
+      objectReference: {fileID: 1922340094668504, guid: d4ab0aea4d17bac409845f00c1ebdd90, type: 3}
     - target: {fileID: 7480876965560147808, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

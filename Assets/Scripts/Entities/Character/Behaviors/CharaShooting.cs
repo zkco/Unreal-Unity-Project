@@ -8,7 +8,7 @@ public class CharaShooting : MonoBehaviour
     [SerializeField] private Transform bulletSpawnPoint;
     private Vector2 aimeDirection = Vector2.right;
 
-    public GameObject Prefab;
+    // public GameObject Prefab;
 
     private void Awake()
     {
@@ -31,5 +31,6 @@ public class CharaShooting : MonoBehaviour
 
         obj.transform.position = bulletSpawnPoint.position;
         obj.transform.rotation = bulletSpawnPoint.rotation;
+        obj.GetComponent<Bullet>().Direction = Vector2.right;
     }
 }
