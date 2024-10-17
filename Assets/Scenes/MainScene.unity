@@ -236,6 +236,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 944798945}
     - target: {fileID: 7141886173911743832, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
+      propertyPath: pools.Array.data[1].size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141886173911743832, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
+      propertyPath: pools.Array.data[2].size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141886173911743832, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
       propertyPath: pools.Array.data[2].prefab
       value: 
       objectReference: {fileID: 1922340094668504, guid: 1f07b7613f722c840864ababa68dfc8a, type: 3}
@@ -1330,6 +1338,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4159927286205539998, guid: 0b2b66aa2a91d394faffb22b0c2a79c0, type: 3}
+      propertyPath: spawnDelayMax
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4159927286205539998, guid: 0b2b66aa2a91d394faffb22b0c2a79c0, type: 3}
       propertyPath: spawnDelayMin
       value: 0.5
