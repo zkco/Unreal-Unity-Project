@@ -30,6 +30,6 @@ public class CharaShooting : MonoBehaviour
         GameObject obj = GameManager.Instance.objectPool.SpawningPool("Bullet");
 
         obj.transform.position = bulletSpawnPoint.position;
-        // Instantiate(Prefab, bulletSpawnPoint.position, Quaternion.identity);
+        obj.transform.rotation = bulletSpawnPoint.rotation;
     }
 }

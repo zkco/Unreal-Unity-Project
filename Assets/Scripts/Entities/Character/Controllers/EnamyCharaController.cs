@@ -9,8 +9,6 @@ public class EnamyCharaController : CharaController
 
     private void FixedUpdate()
     {
-        
-
         ShootGun();
         CallOnMoveEvent(direction);
     }
@@ -19,5 +17,14 @@ public class EnamyCharaController : CharaController
     {
         CallOnMoveEvent(Vector2.zero);
         IsFiring = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            // TODO 체력 감소 넣을 예정
+            gameObject.SetActive(false);
+        }
     }
 }
