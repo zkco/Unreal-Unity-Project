@@ -12,9 +12,17 @@ public class SceneMoveButton : MonoBehaviour
         ScoreScene,
     }
     public SceneName sceneName;
+    private string scene;
+
+    private void Awake()
+    {
+        scene = sceneName.ToString();
+    }
 
     public void ChangeScene()
     {
         SceneManager.LoadScene(sceneName.ToString());
+        if(scene == "MainScene") GameManager.Instance.isPlaying = true;
+        else GameManager.Instance.isPlaying = false;
     }
 }

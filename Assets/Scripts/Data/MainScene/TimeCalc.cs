@@ -4,7 +4,7 @@ using UnityEngine;
 public class TimeCalc : MonoBehaviour
 {
     [SerializeField] private TMP_Text _timeTMP;
-    public float _time;
+    public static float _time;
 
     private void Start()
     {
@@ -13,7 +13,10 @@ public class TimeCalc : MonoBehaviour
 
     private void Update()
     {
-        _time += Time.deltaTime;
-        _timeTMP.text = ((int)_time).ToString();
+        if (GameManager.Instance.isPlaying == true)
+        {
+            _time += Time.deltaTime;
+            _timeTMP.text = ((int)_time).ToString();
+        }
     }
 }
