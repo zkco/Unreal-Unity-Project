@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 205183714}
   - component: {fileID: 205183713}
   - component: {fileID: 205183712}
+  - component: {fileID: 205183715}
   m_Layer: 5
   m_Name: RetrunToTitle
   m_TagString: Untagged
@@ -400,7 +401,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 205183713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 205183715}
+        m_TargetAssemblyTypeName: SceneMoveButton, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &205183713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +452,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205183710}
   m_CullTransparentMesh: 1
+--- !u!114 &205183715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205183710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9ef882290963d49bb116d937d80c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 1
 --- !u!1 &403598069
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +682,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 413472495}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 413472497}
+        m_TargetAssemblyTypeName: SceneMoveButton, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &413472495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,7 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9ef882290963d49bb116d937d80c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 0
+  sceneName: 3
 --- !u!1 &452411256
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +778,7 @@ MonoBehaviour:
   _tmpTime: {fileID: 2107980647}
   _tmpScore: {fileID: 484502446}
   _tmpTotalScore: {fileID: 403598070}
-  RetryPanel: {fileID: 0}
+  RetryPanel: {fileID: 1816655990}
 --- !u!4 &452411258
 Transform:
   m_ObjectHideFlags: 0

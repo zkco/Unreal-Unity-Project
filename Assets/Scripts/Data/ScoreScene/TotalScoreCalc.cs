@@ -11,21 +11,21 @@ public class TotalScoreCalc : MonoBehaviour
     [SerializeField] private TMP_Text _tmpScore;
     [SerializeField] private TMP_Text _tmpTotalScore;
     [SerializeField] private GameObject RetryPanel;
-
-
-    private ScoreCalc _mainSceneScore;
-    private TimeCalc _mainSceneTime;
+    private readonly WaitForSeconds WaitFor2Seconds = new WaitForSeconds(2f);
 
     //TODO : 점수를 받아와 표시할 변수 추가
     private int _time;
     private int _score;
     private int _totalScore;
 
+    private void Awake()
+    {
 
+    }
     private void Start()
     {
-        _time = (int)_mainSceneTime._time;
-        _score = _mainSceneScore.Score;
+        _time = (int)TimeCalc._time;
+        _score = ScoreCalc.Score;
 
         _tmpTime.text = _time.ToString();
         _tmpScore.text = _score.ToString();
@@ -42,6 +42,12 @@ public class TotalScoreCalc : MonoBehaviour
         _tmpTime.text = _time.ToString();
         _tmpScore.text = _score.ToString();
         _tmpTotalScore.text = _totalScore.ToString();
+        if (_time == 0 && _score == 0)
+        {
+            RetryPanel.SetActive(true);
+            StopCoroutine(TimeCalcTotalScore());
+            StopCoroutine(ScoreCalcTotalScore());
+        }
     }
 
     private IEnumerator TimeCalcTotalScore()
@@ -52,7 +58,7 @@ public class TotalScoreCalc : MonoBehaviour
             for(; _time > 0; _time--)
             {
                 _totalScore += 3;
-                yield return new WaitForSeconds(0.02f);
+                yield return WaitFor2Seconds;
             }
         }
     }
@@ -64,7 +70,7 @@ public class TotalScoreCalc : MonoBehaviour
             for (; _score > 0; _score--)
             {
                 _totalScore++;
-                yield return new WaitForSeconds(0.02f);
+                yield return WaitFor2Seconds;
             }
         }
     }
@@ -73,11 +79,5 @@ public class TotalScoreCalc : MonoBehaviour
     {
         StartCoroutine(TimeCalcTotalScore());
         StartCoroutine(ScoreCalcTotalScore());
-        if (_time == 0 && _score == 0)
-        {
-            StopCoroutine(TimeCalcTotalScore());
-            StopCoroutine(ScoreCalcTotalScore());
-            RetryPanel.SetActive(true);
-        }
     }
 }

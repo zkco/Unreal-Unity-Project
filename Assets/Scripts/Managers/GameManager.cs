@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
     public ObjectPool objectPool;
+    public bool isPlaying;
 
     private void Awake()
     {
@@ -14,5 +14,10 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         objectPool = GetComponent<ObjectPool>();
+    }
+
+    private void Start()
+    {
+        isPlaying = true;
     }
 }

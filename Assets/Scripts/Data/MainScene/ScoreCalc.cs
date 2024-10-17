@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScoreCalc : MonoBehaviour
 {
     [SerializeField] private TMP_Text _scoreTMP;
-    public int Score;
+    public static int Score;
 
     private void Start()
     {
