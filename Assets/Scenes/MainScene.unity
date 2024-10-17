@@ -337,6 +337,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1990167094918591087, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
+      propertyPath: Prefab
+      value: 
+      objectReference: {fileID: 1922340094668504, guid: d4ab0aea4d17bac409845f00c1ebdd90, type: 3}
     - target: {fileID: 5171607471682114751, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
       propertyPath: m_Name
       value: Cowboy02

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class CharaShooting : MonoBehaviour
+public class EnemyShooting : MonoBehaviour
 {
     private CharaController controller;
 
@@ -27,12 +27,9 @@ public class CharaShooting : MonoBehaviour
 
     private void CreateBullet()
     {
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        worldPosition.z = 0;
-        worldPosition -= (transform.position + new Vector3(0, -0.5f));
-
+        
         GameObject newBullet = Instantiate<GameObject>(Prefab);
         newBullet.transform.position = transform.position + new Vector3(0,-0.5f);
-        newBullet.GetComponent<Bullet>().Direction = worldPosition;
+        newBullet.GetComponent<Bullet>().Direction = new Vector2(-1, 0);
     }
 }
