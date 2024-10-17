@@ -7,8 +7,6 @@ public class SpriteFlip : MonoBehaviour
 {
     private CharaController controller;
 
-    private float one = 1f;
-
     private void Awake()
     {
         controller = GetComponent<CharaController>();
@@ -24,11 +22,11 @@ public class SpriteFlip : MonoBehaviour
     {
         if (direction.x < 0)
         {
-            transform.localScale = new Vector3(-one, one, one);
+            transform.rotation = Quaternion.Euler(0, 180f, 0);
         }
         else
         {
-            transform.localScale = new Vector3(one, one, one);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }

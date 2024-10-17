@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class CharaStatHandler : MonoBehaviour
 {
-    [SerializeField] public PlayerStat stat;
+    [SerializeField] public CharacterDefaultStat stat;
 }
