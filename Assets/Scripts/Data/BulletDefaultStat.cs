@@ -11,4 +11,5 @@ public class BulletDefaultStat : ScriptableObject
     public float Size;
     public float Spread;
     public int NumberOfProjectiles;
+    public float dir;
 }
