@@ -3,8 +3,6 @@ using UnityEngine.SocialPlatforms;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    private ObjectPool objectPool;
-
     private float spawnTimer;
 
     [SerializeField] private string PoolTag;
@@ -15,11 +13,6 @@ public class ObjectSpawner : MonoBehaviour
 
     [SerializeField, Range(9f, 10f)] private float spawnXValue;
     [SerializeField, Range(0f, 5f)] private float spawnYValue;
-
-    private void Awake()
-    {
-        objectPool = GetComponent<ObjectPool>();
-    }
 
     private void Update()
     {
@@ -42,7 +35,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         float spawnX = spawnXValue;
         float spawnY = Random.Range(-spawnYValue, spawnYValue);
-        GameObject obj = objectPool.SpawningPool(PoolTag);
+        GameObject obj = GameManager.Instance.objectPool.SpawningPool(PoolTag);
 
         obj.transform.position = new Vector2(spawnX, spawnY);
     }
