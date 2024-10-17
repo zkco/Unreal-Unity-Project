@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7480876965560147808}
   - component: {fileID: 7141886173911743832}
+  - component: {fileID: 8566284100239932934}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,4 +45,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9a0e33638ec344b874730863fb0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pools: []
+  pools:
+  - tag: Outlaw
+    prefab: {fileID: 9211864991512264667, guid: d30379cb73d758646b4c911aaf9f62a0, type: 3}
+    size: 5
+--- !u!114 &8566284100239932934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88304029352033310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2443eb803bb40914bb53d81a35d872c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolTag: 
+  spawnDelay: 3
+  spawnDelayMin: 2
+  spawnDelayMax: 5
+  spawnXValue: 10
+  spawnYValue: 4.5

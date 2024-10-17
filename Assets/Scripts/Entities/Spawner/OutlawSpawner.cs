@@ -4,15 +4,13 @@ public class OutlawSpawner : MonoBehaviour
 {
     private ObjectPool outlawPool;
 
-    private float spawnX;
-    private float spawnY;
-
     private float spawnDelay;
     private float spawnDelayMin;
     private float spawnDelayMax;
 
     private float spawnTimer;
 
+    private float spawnXValue;
     private float spawnYValue;
 
     private void Awake()
@@ -28,6 +26,7 @@ public class OutlawSpawner : MonoBehaviour
 
         spawnTimer = 0f;
 
+        spawnXValue = 10f;
         spawnYValue = 4.5f;
     }
 
@@ -50,7 +49,7 @@ public class OutlawSpawner : MonoBehaviour
 
     private void CreateOutlaw()
     {
-        float spawnX = transform.position.x;
+        float spawnX = spawnXValue;
         float spawnY = Random.Range(-spawnYValue, spawnYValue);
         GameObject obj = outlawPool.SpawningPool("Outlaw");
 
