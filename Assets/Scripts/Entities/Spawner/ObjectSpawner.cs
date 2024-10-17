@@ -30,6 +30,7 @@ public class ObjectSpawner : MonoBehaviour
     [Header("Random Y position For RandomPosition or All Random")]
     [SerializeField] private float spawnYValueMin = 0;
     [SerializeField] private float spawnYValueMax = 0;
+    // X나 Y축을 고정하고 싶다면 RandomPosition이나 AllRandom에서 고정할 축 min,max 값을 맞춰줄 것
 
     private string selector;
 
