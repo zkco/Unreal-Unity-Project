@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2443eb803bb40914bb53d81a35d872c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PoolTag: 
+  PoolTag: Outlaw
   spawnDelay: 3
   spawnDelayMin: 2
   spawnDelayMax: 5
