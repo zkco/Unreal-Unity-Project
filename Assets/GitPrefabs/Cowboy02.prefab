@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 3755048274042270878}
   - component: {fileID: 5868503568634447003}
   - component: {fileID: 8915427313045451082}
+  - component: {fileID: 1354088266642254871}
   m_Layer: 6
   m_Name: Cowboy02
   m_TagString: Player
@@ -337,6 +338,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: 04647adb7c442d6489361281b7d5f563, type: 2}
+--- !u!114 &1354088266642254871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820851823760252320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919d460285e4d564397b00e4914ca20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7434339441264484727
 GameObject:
   m_ObjectHideFlags: 0

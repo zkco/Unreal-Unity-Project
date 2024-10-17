@@ -5,7 +5,19 @@ using UnityEngine;
 
 public class EnamyCharaController : CharaController
 {
-    Vector2 direction = Vector2.left;
+    [SerializeField] private CharaHealthController PlayerHP;
+
+    Vector2 direction;
+
+    private void OnEnable()
+    {
+        direction = Vector2.left;
+    }
+
+    private void Start()
+    {
+        
+    }
 
     private void FixedUpdate()
     {
@@ -15,7 +27,6 @@ public class EnamyCharaController : CharaController
 
     private void ShootGun()
     {
-        CallOnMoveEvent(Vector2.zero);
         IsFiring = true;
     }
 
@@ -24,7 +35,8 @@ public class EnamyCharaController : CharaController
         if (collision.gameObject.tag == "Finish")
         {
             // TODO 체력 감소 넣을 예정
-            gameObject.SetActive(false);
+            direction = Vector2.zero;
+            //gameObject.SetActive(false);
         }
     }
 }
