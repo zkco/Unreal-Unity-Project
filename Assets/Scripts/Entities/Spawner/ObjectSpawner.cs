@@ -7,8 +7,8 @@ public class ObjectSpawner : MonoBehaviour
 
     [SerializeField] private string PoolTag;
 
-    [SerializeField, Range(1f, 10f)] private float spawnDelay;
-    [SerializeField, Range(1f, 3f)] private float spawnDelayMin;
+    [SerializeField, Range(0.5f, 10f)] private float spawnDelay;
+    [SerializeField, Range(0.5f, 3f)] private float spawnDelayMin;
     [SerializeField, Range(4f, 10f)] private float spawnDelayMax;
 
     [SerializeField, Range(9f, 10f)] private float spawnXValue;
@@ -38,5 +38,6 @@ public class ObjectSpawner : MonoBehaviour
         GameObject obj = GameManager.Instance.objectPool.SpawningPool(PoolTag);
 
         obj.transform.position = new Vector2(spawnX, spawnY);
+        obj.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
 }
