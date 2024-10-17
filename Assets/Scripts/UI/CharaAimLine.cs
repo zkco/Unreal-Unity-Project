@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CharaAimLine : MonoBehaviour
 {
@@ -23,7 +20,7 @@ public class CharaAimLine : MonoBehaviour
 
     public void UpdateAimLine(Vector2 pointPos)
     {
-        float distance = Vector2.Distance(bulletSpawnPoint.position, pointPos);
+        float distance = Vector2.Distance(pointPos, bulletSpawnPoint.position);
 
         imageRectTransform.sizeDelta = new Vector2(distance-0.55f, imageRectTransform.sizeDelta.y);
     }

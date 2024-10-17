@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class CharaAimPoint : MonoBehaviour
 {
@@ -28,7 +29,6 @@ public class CharaAimPoint : MonoBehaviour
         Vector2 topRight = _camera.ViewportToWorldPoint(new Vector3(1, 1, _camera.nearClipPlane));
 
         pointX = Mathf.Clamp(vector.x, bulletSpawnPoint.position.x, topRight.x);
-        
         pointY = Mathf.Clamp(vector.y, bottomLeft.y, topRight.y);
 
         aimPoint.position = new Vector2(pointX, pointY);
