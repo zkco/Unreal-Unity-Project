@@ -9,6 +9,8 @@ public class EnamyCharaController : CharaController
 
     private void FixedUpdate()
     {
+        
+
         ShootGun();
         CallOnMoveEvent(direction);
     }

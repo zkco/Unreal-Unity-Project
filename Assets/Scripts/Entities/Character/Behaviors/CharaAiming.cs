@@ -28,9 +28,6 @@ public class CharaAiming : MonoBehaviour
     {
         float rotZ = Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg;
 
-        if (Mathf.Abs(rotZ) <= 90)
-        {
-            bulletSpawnPoint.rotation = Quaternion.Euler(0, 0, rotZ);
-        }
+        bulletSpawnPoint.rotation = Quaternion.Euler(0, 0, rotZ);
     }
 }

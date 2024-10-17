@@ -10,7 +10,6 @@ public class SceneMoveButton : MonoBehaviour
         CharacterSelectScene,
         MainScene,
         ScoreScene,
-        None,
     }
     public SceneName sceneName;
 
