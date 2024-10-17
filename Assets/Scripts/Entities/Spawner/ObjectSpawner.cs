@@ -8,8 +8,8 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField] private string PoolTag;
 
     [SerializeField, Range(0.5f, 10f)] private float spawnDelay;
-    [SerializeField, Range(0.5f, 3f)] private float spawnDelayMin;
-    [SerializeField, Range(4f, 10f)] private float spawnDelayMax;
+    [SerializeField, Range(0.5f, 2f)] private float spawnDelayMin;
+    [SerializeField, Range(1.5f, 10f)] private float spawnDelayMax;
 
     [SerializeField, Range(9f, 10f)] private float spawnXValue;
     [SerializeField, Range(0f, 5f)] private float spawnYValue;
