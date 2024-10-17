@@ -1,35 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class CharaAimPoint : MonoBehaviour
 {
-    [SerializeField] private Transform bulletSpawnPoint;
-    [SerializeField] private RectTransform imageRectTransform;
-
-    private Camera mainCamera;
     private CharaController controller;
+    [SerializeField] private Transform aimPoint;
+    [SerializeField] private Transform bulletSpawnPoint;
 
-    private float distanceMax = 17f;
+    private Camera _camera;
+
+    private float pointX;
+    private float pointY;
 
     private void Awake()
     {
-        mainCamera = Camera.main;
         controller = GetComponent<CharaController>();
+        _camera = Camera.main;
     }
 
     private void Start()
     {
-        controller.OnAimEvent += UpdateFillAmount;
+        controller.OnAimEvent += SetAimPoint;
     }
 
-    public void UpdateFillAmount(Vector2 mousePos)
+    private void SetAimPoint(Vector2 vector)
     {
-        float distance = Vector2.Distance(bulletSpawnPoint.position, mousePos);
-        distance = Mathf.Clamp(distance, distance, distanceMax);
+        Vector2 bottomLeft = _camera.ViewportToWorldPoint(new Vector3(0, 0, _camera.nearClipPlane));
+        Vector2 topRight = _camera.ViewportToWorldPoint(new Vector3(1, 1, _camera.nearClipPlane));
 
-        Vector2 direction = (mousePos - (Vector2)bulletSpawnPoint.position).normalized;
-        imageRectTransform.sizeDelta = new Vector2(distance, imageRectTransform.sizeDelta.y);
+        pointX = Mathf.Clamp(vector.x, bulletSpawnPoint.position.x, topRight.x);
+        
+        pointY = Mathf.Clamp(vector.y, bottomLeft.y, topRight.y);
+
+        aimPoint.position = new Vector2(pointX, pointY);
     }
 }
