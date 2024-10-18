@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _bgmPlayer; //배경음악
-    [SerializeField] private AudioSource _sefPlayer; //효과음
+    public Queue<GameObject> _sefQueue;
 
     [SerializeField] private AudioClip[] _bgm;
     [SerializeField] private AudioClip[] _sef;
@@ -42,6 +44,14 @@ public class SoundManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(instance);
         }
+        _sefQueue = new Queue<GameObject>();
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject obj = new GameObject();
+            obj.AddComponent<AudioSource>();
+            _sefQueue.Enqueue(obj);
+            DontDestroyOnLoad(obj);
+        }
     }
 
     private void Start()
@@ -73,31 +83,16 @@ public class SoundManager : MonoBehaviour
         {
             if (_sef[i].name == soundName)
             {
-                _sefPlayer.clip = _bgm[i];
-                _sefPlayer.Play();
+                PlaySefQueue(_sefQueue, _sef[i]);
                 return;
             }
         }
-        _sefPlayer = null;
     }
-
-    public bool isPlaying(string clipName) //"bgm", "sef"
+    private void PlaySefQueue(Queue<GameObject> sefQueue, AudioClip audioClip)
     {
-        switch (clipName)
-        {
-            case "bgm": 
-                if(_bgmPlayer == null)
-                {
-                    return false;
-                }
-                else return true;
-            case "sef":
-                if (_sefPlayer == null)
-                {
-                    return false;
-                }
-                else return true;
-            default: return false;
-        }
+        GameObject obj = sefQueue.Dequeue();
+        obj.GetComponent<AudioSource>().clip = audioClip;
+        obj.GetComponent<AudioSource>().Play();
+        _sefQueue.Enqueue(obj);
     }
 }

@@ -27,6 +27,7 @@ public class CharaShooting : MonoBehaviour
 
     private void CreateBullet()
     {
+        SoundManager.Instance.PlaySef("GunShot");
         GameObject obj = GameManager.Instance.objectPool.SpawningPool("Bullet");
 
         obj.transform.position = bulletSpawnPoint.position;
