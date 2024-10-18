@@ -27,10 +27,11 @@ public class CharaShooting : MonoBehaviour
 
     private void CreateBullet()
     {
+        SoundManager.Instance.PlaySef("GunShot");
         GameObject obj = GameManager.Instance.objectPool.SpawningPool("Bullet");
 
         obj.transform.position = bulletSpawnPoint.position;
         obj.transform.rotation = bulletSpawnPoint.rotation;
-        obj.GetComponent<Bullet>().Direction = Vector2.right;
+        //obj.GetComponent<Bullet>().Direction = Vector2.right;
     }
 }

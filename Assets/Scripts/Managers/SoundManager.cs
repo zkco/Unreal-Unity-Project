@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _bgmPlayer; //배경음악
-    [SerializeField] private AudioSource _sefPlayer; //효과음
+    public Queue<GameObject> _sefQueue;
 
     [SerializeField] private AudioClip[] _bgm;
     [SerializeField] private AudioClip[] _sef;
@@ -42,14 +44,22 @@ public class SoundManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(instance);
         }
+        _sefQueue = new Queue<GameObject>();
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject obj = new GameObject();
+            obj.AddComponent<AudioSource>();
+            _sefQueue.Enqueue(obj);
+            DontDestroyOnLoad(obj);
+        }
     }
 
     private void Start()
     {
-        /*PlayBgm("기본 배경음악 이름");*/
+        PlayBgm("OtherSceneBGM");
     }
 
-    private void PlayBgm(string soundName)
+    public void PlayBgm(string soundName)
     {
         for (int i = 0; i < _bgm.Length; i++)
         {
@@ -62,23 +72,27 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void StopBgm()
+    public void StopBgm()
     {
         _bgmPlayer.Stop();
-        _bgmPlayer = null;
     }
 
-    private void PlaySef(string soundName)
+    public void PlaySef(string soundName)
     {
         for (int i = 0; i < _sef.Length; i++)
         {
             if (_sef[i].name == soundName)
             {
-                _sefPlayer.clip = _bgm[i];
-                _sefPlayer.Play();
+                PlaySefQueue(_sefQueue, _sef[i]);
                 return;
             }
         }
-        _sefPlayer = null;
+    }
+    private void PlaySefQueue(Queue<GameObject> sefQueue, AudioClip audioClip)
+    {
+        GameObject obj = sefQueue.Dequeue();
+        obj.GetComponent<AudioSource>().clip = audioClip;
+        obj.GetComponent<AudioSource>().Play();
+        _sefQueue.Enqueue(obj);
     }
 }

@@ -82,5 +82,6 @@ public class ObjectSpawner : MonoBehaviour
         }
         GameObject obj = GameManager.Instance.objectPool.SpawningPool(PoolTag);
         obj.transform.position = new Vector2(spawnX, spawnY);
+        obj.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
 }
