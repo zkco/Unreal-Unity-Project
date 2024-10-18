@@ -13,7 +13,7 @@ public class CharaController : MonoBehaviour
     public event Action OnRevive;
 
     private float timeSinceLastAttack = float.MaxValue;
-    protected bool isDead;
+    public bool isDead;
     protected bool IsFiring { get; set; }
 
     protected CharaStatHandler stats;
