@@ -51,5 +51,6 @@ public class GameoverChecker : MonoBehaviour
     void LoadScoreScene()
     {
         SceneManager.LoadScene("ScoreScene");
+        Time.timeScale = 1f;
     }
 }
