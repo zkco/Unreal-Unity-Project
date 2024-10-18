@@ -18,8 +18,7 @@ public class EnamyCharaController : CharaController
 
     private void OnEnable()
     {
-        isDead = false;
-        stat.CurrentHP = stat.stat.MaxHP;
+        CallOnReviveEvent();
     }
 
     private void FixedUpdate()
@@ -42,13 +41,13 @@ public class EnamyCharaController : CharaController
 
     private void EnemyMove()
     {
-        if (!isDead)
+        if(isDead)
         {
-            direction = Vector2.left;
+            direction = Vector2.zero;
         }
         else
         {
-            direction = Vector2.zero;
+            direction = Vector2.left;
         }
 
         CallOnMoveEvent(direction);
@@ -56,9 +55,9 @@ public class EnamyCharaController : CharaController
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "BulletRemover")
+        if (collision.gameObject.tag == "Finish")
         {
-            //gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

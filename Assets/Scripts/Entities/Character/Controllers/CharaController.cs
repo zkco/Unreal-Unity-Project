@@ -10,6 +10,7 @@ public class CharaController : MonoBehaviour
     public event Action<Vector2> OnAimEvent;
     public event Action OnFireEvent;
     public event Action OnDeath;
+    public event Action OnRevive;
 
     private float timeSinceLastAttack = float.MaxValue;
     protected bool isDead;
@@ -62,5 +63,12 @@ public class CharaController : MonoBehaviour
     {
         OnDeath?.Invoke();
         isDead = true;
+    }
+
+    protected void CallOnReviveEvent()
+    {
+        OnRevive?.Invoke();
+        isDead = false;
+        stats.CurrentHP = stats.stat.MaxHP;
     }
 }

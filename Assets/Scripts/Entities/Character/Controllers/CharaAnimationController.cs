@@ -18,6 +18,7 @@ public class CharaAnimationController : AnimationController
         controller.OnMoveEvent += Move;
         controller.OnFireEvent += Shoot;
         controller.OnDeath += Die;
+        controller.OnRevive += Revive;
     }
 
     private void Move(Vector2 vector)
@@ -32,11 +33,13 @@ public class CharaAnimationController : AnimationController
 
     private void Die()
     {
+        Debug.Log("Die");
         animator.SetBool(isDead, true);
     }
 
     private void Revive()
     {
+        Debug.Log("Revive");
         animator.SetBool(isDead, false);
     }
 }

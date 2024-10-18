@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigBulletSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 8258832480714230059, guid: 0b2b66aa2a91d394faffb22b0c2a79c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -288,6 +292,10 @@ PrefabInstance:
       propertyPath: _scoreTMP
       value: 
       objectReference: {fileID: 2010654548}
+    - target: {fileID: 7141886173911743832, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
+      propertyPath: pools.Array.data[0].size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7480876965560147808, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -686,23 +694,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944798943}
   m_CullTransparentMesh: 1
---- !u!1 &951025758 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6820851823760252320, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
-  m_PrefabInstance: {fileID: 1953530852163670905}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &951025770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951025758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81dc3c79fdaf7d943b85d4f42bbe1f34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1027598164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1387,14 +1378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cowboy02
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1354088266642254871, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6820851823760252320, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 951025770}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

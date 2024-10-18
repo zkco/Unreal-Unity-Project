@@ -26,13 +26,11 @@ public class BulletHit : MonoBehaviour
             switch (collision.gameObject.tag)
             {
                 case "Enemy":
-                    Debug.Log("Enemy Hit");
                     collisionStat.CurrentHP -= bullet.damage;
                     RemoveBullet();
                     break;
 
                 case "Player":
-                    Debug.Log("Player Hit");
                     collisionStat.CurrentHP -= bullet.damage;
                     RemoveBullet();
                     break;
