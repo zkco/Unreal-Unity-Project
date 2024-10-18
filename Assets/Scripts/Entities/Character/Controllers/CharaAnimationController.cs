@@ -33,13 +33,11 @@ public class CharaAnimationController : AnimationController
 
     private void Die()
     {
-        Debug.Log("Die");
         animator.SetBool(isDead, true);
     }
 
     private void Revive()
     {
-        Debug.Log("Revive");
         animator.SetBool(isDead, false);
     }
 }
