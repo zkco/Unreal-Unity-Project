@@ -1,25 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DifficultySelector : MonoBehaviour
-{    
-    public enum Difficulty
-    {
-        Normal,
-        Hard
-    }
+{
     public void SelectNormalDifficulty()
     {
-        PlayerPrefs.SetInt("GameDifficulty", (int)Difficulty.Normal);
+        DifficultyManager.SaveDifficulty(DifficultyManager.Difficulty.Normal);
         Debug.Log("Normal Difficulty Selected");
-        // 게임 씬을 로드하거나 다른 작업을 추가할 수 있습니다.
+        // 필요한 경우 게임 씬을 로드하거나 다른 작업을 수행합니다.
     }
 
-    // 이 함수는 Hard 난이도를 선택했을 때 호출됩니다.
     public void SelectHardDifficulty()
     {
-        PlayerPrefs.SetInt("GameDifficulty", (int)Difficulty.Hard);
+        DifficultyManager.SaveDifficulty(DifficultyManager.Difficulty.Hard);
         Debug.Log("Hard Difficulty Selected");
-        // 게임 씬을 로드하거나 다른 작업을 추가할 수 있습니다.
+        // 필요한 경우 게임 씬을 로드하거나 다른 작업을 수행합니다.
     }
 }

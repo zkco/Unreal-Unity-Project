@@ -1,17 +1,14 @@
 using UnityEngine;
-
+using System.Collections;
 public class OutlawSpawner : MonoBehaviour
 {
     private ObjectPool outlawPool;
 
-    private float spawnDelay;
-    private float spawnDelayMin;
-    private float spawnDelayMax;
+    private float spawnDelay; // 스폰 간격
 
-    private float spawnTimer;
-
-    private float spawnXValue;
-    private float spawnYValue;
+    [Header("Spawn Settings")]
+    public int normalSpawnAmount = 3; // 노말 난이도에서 생성할 적의 수
+    public int hardSpawnAmount = 5; // 하드 난이도에서 생성할 적의 수
 
     private void Awake()
     {
@@ -20,39 +17,28 @@ public class OutlawSpawner : MonoBehaviour
 
     private void Start()
     {
-        spawnDelay = 3f;
-        spawnDelayMin = 2f;
-        spawnDelayMax = 5f;
-
-        spawnTimer = 0f;
-
-        spawnXValue = 10f;
-        spawnYValue = 4.5f;
+        spawnDelay = 1f; // 스폰 간격 설정 (1초)
+        StartCoroutine(SpawnOutlaws());
     }
 
-    private void Update()
+    private IEnumerator SpawnOutlaws()
     {
-        SpawnTimeCheck();
-    }
+        // 현재 난이도 가져오기
+        DifficultyManager.Difficulty difficulty = DifficultyManager.GetSavedDifficulty();
+        int spawnAmount = (difficulty == DifficultyManager.Difficulty.Hard) ? hardSpawnAmount : normalSpawnAmount;
 
-    private void SpawnTimeCheck()
-    {
-        spawnTimer += Time.deltaTime;
-
-        if (spawnTimer >= spawnDelay)
+        for (int i = 0; i < spawnAmount; i++)
         {
-            CreateOutlaw();
-            spawnTimer = 0f;
-            spawnDelay = Random.Range(spawnDelayMin, spawnDelayMax);
+            CreateOutlaw(); // 적 스폰
+            yield return new WaitForSeconds(spawnDelay); // 스폰 간격만큼 대기
         }
     }
 
     private void CreateOutlaw()
     {
-        float spawnX = spawnXValue;
-        float spawnY = Random.Range(-spawnYValue, spawnYValue);
+        float spawnY = Random.Range(-4.5f, 4.5f); // Y 위치 랜덤 설정
         GameObject obj = outlawPool.SpawningPool("Outlaw");
-
-        obj.transform.position = new Vector2(spawnX, spawnY);
+        obj.transform.position = new Vector2(10f, spawnY); // 적 스폰 위치
+        Debug.Log($"적 생성됨: {obj.name}");
     }
 }
