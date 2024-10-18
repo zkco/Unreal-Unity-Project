@@ -28,8 +28,12 @@ public class SceneMoveButton : MonoBehaviour
         }
         else
         {
-            if (scene == "MainScene") GameManager.Instance.isPlaying = true;
-            else GameManager.Instance.isPlaying = false;
+            if (scene == "MainScene")
+            {
+                SoundManager.Instance.StopBgm();
+                SoundManager.Instance.PlayBgm("MainGameBGM");
+                GameManager.Instance.isPlaying = true;
+            }
         }
     }
 }

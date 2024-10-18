@@ -46,10 +46,10 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        /*PlayBgm("기본 배경음악 이름");*/
+        PlayBgm("OtherSceneBGM");
     }
 
-    private void PlayBgm(string soundName)
+    public void PlayBgm(string soundName)
     {
         for (int i = 0; i < _bgm.Length; i++)
         {
@@ -62,13 +62,12 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void StopBgm()
+    public void StopBgm()
     {
         _bgmPlayer.Stop();
-        _bgmPlayer = null;
     }
 
-    private void PlaySef(string soundName)
+    public void PlaySef(string soundName)
     {
         for (int i = 0; i < _sef.Length; i++)
         {
@@ -80,5 +79,25 @@ public class SoundManager : MonoBehaviour
             }
         }
         _sefPlayer = null;
+    }
+
+    public bool isPlaying(string clipName) //"bgm", "sef"
+    {
+        switch (clipName)
+        {
+            case "bgm": 
+                if(_bgmPlayer == null)
+                {
+                    return false;
+                }
+                else return true;
+            case "sef":
+                if (_sefPlayer == null)
+                {
+                    return false;
+                }
+                else return true;
+            default: return false;
+        }
     }
 }
