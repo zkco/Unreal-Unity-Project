@@ -47,6 +47,8 @@ public class BulletHit : MonoBehaviour
             if(collision.gameObject.tag == "Enemy")
             {
                 // TODO 점수 변동 추가
+                OutlawStat outlawStat = (OutlawStat)collisionStat.stat;
+                ScoreCalc.Score += outlawStat.score;
             }
         }
     }
