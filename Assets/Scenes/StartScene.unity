@@ -434,6 +434,9 @@ PrefabInstance:
     - {fileID: 7141886173911743832, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
     - {fileID: 4824647602707056963, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
     - {fileID: 3531083268709350048, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
+    - {fileID: 6088198550752796468, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
+    - {fileID: 3056561310245688476, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
+    - {fileID: 8900414086946681686, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -671,7 +674,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bgmPlayer: {fileID: 1624227822}
-  _sefPlayer: {fileID: 1624227823}
   _bgm:
   - {fileID: 8300000, guid: 4423367953268fb4a87c314c764d80b0, type: 3}
   - {fileID: 8300000, guid: 954c6ef98fc4980428fa6a98d600605e, type: 3}
