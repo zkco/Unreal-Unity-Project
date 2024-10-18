@@ -2687,6 +2687,8 @@ MonoBehaviour:
   - {fileID: 1091012160}
   - {fileID: 1005607992}
   - {fileID: 2140425828}
+  emptyRankText: empty
+  animationDuration: 1
 --- !u!4 &1042503343
 Transform:
   m_ObjectHideFlags: 0
