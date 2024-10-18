@@ -51,6 +51,7 @@ public class GameoverChecker : MonoBehaviour
     void LoadScoreScene()
     {
         SceneManager.LoadScene("ScoreScene");
+        SoundManager.Instance.PlayBgm("OtherSceneBGM");
         Time.timeScale = 1f;
     }
 }
