@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        
+        direction = Vector2.right;
     }
 
     // Update is called once per frame

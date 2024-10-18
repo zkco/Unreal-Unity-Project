@@ -36,7 +36,7 @@ public class EnamyCharaController : CharaController
         {
             // TODO 체력 감소 넣을 예정
             direction = Vector2.zero;
-            //gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

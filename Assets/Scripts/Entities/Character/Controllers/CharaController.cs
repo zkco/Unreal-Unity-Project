@@ -39,7 +39,6 @@ public class CharaController : MonoBehaviour
         }
     }
 
-
     protected void CallOnMoveEvent(Vector2 vector2)
     {
         OnMoveEvent?.Invoke(vector2);

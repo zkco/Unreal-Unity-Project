@@ -31,6 +31,6 @@ public class CharaShooting : MonoBehaviour
 
         obj.transform.position = bulletSpawnPoint.position;
         obj.transform.rotation = bulletSpawnPoint.rotation;
-        obj.GetComponent<Bullet>().Direction = Vector2.right;
+        //obj.GetComponent<Bullet>().Direction = Vector2.right;
     }
 }
