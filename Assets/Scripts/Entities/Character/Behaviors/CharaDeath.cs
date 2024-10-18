@@ -5,22 +5,29 @@ using UnityEngine;
 
 public class CharaDeath : MonoBehaviour
 {
-    private CharaHealthController healthController;
+    private CharaController controller;
     private Rigidbody2D rb;
+
+    private float dispawnTime = 2f;
 
     private void Awake()
     {
-        healthController = GetComponent<CharaHealthController>();
+        controller = GetComponent<CharaController>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
     {
-        healthController.OnDeath += OnDeath;
+        controller.OnDeath += OnDeath;
     }
 
     private void OnDeath()
     {
-        rb.velocity = Vector3.zero;
+        Invoke("DisactiveChara", dispawnTime);
+    }
+
+    private void DisactiveChara()
+    {
+        gameObject.SetActive(false);
     }
 }

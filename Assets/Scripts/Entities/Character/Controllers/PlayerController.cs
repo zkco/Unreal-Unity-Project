@@ -16,13 +16,16 @@ public class PlayerController : CharaController
 
     private void OnMove(InputValue inputValue)
     {
-        Vector2 moveDirection = inputValue.Get<Vector2>().normalized;
-        
+        Vector2 moveDirection;
+        if (isDead) moveDirection = Vector2.zero;
+        else moveDirection = inputValue.Get<Vector2>().normalized;
+
         CallOnMoveEvent(moveDirection);
     }
 
     private void OnAim(InputValue inputValue)
     {
+        if (isDead) return;
         Vector2 mousePos = inputValue.Get<Vector2>();
         Vector2 worldPos = _camera.ScreenToWorldPoint(mousePos);
         Vector2 lookDirection = (worldPos - (Vector2)bulletSpawnPoint.position).normalized;
@@ -32,6 +35,7 @@ public class PlayerController : CharaController
 
     private void OnFire(InputValue inputValue)
     {
+        if (isDead) return;
         IsFiring = inputValue.isPressed;
     }
 }

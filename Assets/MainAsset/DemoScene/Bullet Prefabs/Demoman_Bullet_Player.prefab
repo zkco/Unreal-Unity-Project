@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 50577898386675116}
   - component: {fileID: 4076280173107923864}
   - component: {fileID: -1479449649737698239}
-  - component: {fileID: 771138024662650211}
+  - component: {fileID: 147091086257384408}
   m_Layer: 0
-  m_Name: Demoman_Bullet
+  m_Name: Demoman_Bullet_Player
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   damage: 1
---- !u!114 &771138024662650211
+--- !u!114 &147091086257384408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,4 +176,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7626a2823182854cb919ddf1ce3b96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLayerName: Player
+  targetLayerName: Enemy

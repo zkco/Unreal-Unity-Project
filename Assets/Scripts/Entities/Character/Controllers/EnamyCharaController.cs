@@ -1,42 +1,63 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Xml.Serialization;
 using UnityEngine;
 
 public class EnamyCharaController : CharaController
 {
-    [SerializeField] private CharaHealthController PlayerHP;
+    private CharaStatHandler stat;
 
     Vector2 direction;
 
-    private void OnEnable()
+    protected override void Awake()
     {
-        direction = Vector2.left;
+        base.Awake();
+        stat = GetComponent<CharaStatHandler>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        
+        CallOnReviveEvent();
     }
 
     private void FixedUpdate()
     {
         ShootGun();
-        CallOnMoveEvent(direction);
+        EnemyMove();
     }
 
     private void ShootGun()
     {
-        IsFiring = true;
+        if(!isDead)
+        {
+            IsFiring = true;
+        }
+        else
+        {
+            IsFiring = false;
+        }
+    }
+
+    private void EnemyMove()
+    {
+        if(isDead)
+        {
+            direction = Vector2.zero;
+        }
+        else
+        {
+            direction = Vector2.left;
+        }
+
+        CallOnMoveEvent(direction);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Finish")
         {
-            // TODO 체력 감소 넣을 예정
-            direction = Vector2.zero;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }

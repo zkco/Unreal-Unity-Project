@@ -35,7 +35,6 @@ public class CharaMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        // 캐릭터 스피드 적용할 예정
         direction = direction * stats.stat.Speed;
 
         charaRigidbody.velocity = direction;

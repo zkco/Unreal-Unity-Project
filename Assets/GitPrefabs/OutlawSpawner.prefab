@@ -51,7 +51,7 @@ MonoBehaviour:
   spawnDelayMax: 5
   spawnXValue: 0
   spawnYValue: 0
-  spawnXValueMin: 11
-  spawnXValueMax: 11
+  spawnXValueMin: 10
+  spawnXValueMax: 10
   spawnYValueMin: -4.5
   spawnYValueMax: 4.5
