@@ -45,8 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PoolTag: BigBullet
+  spawnType: 2
   spawnDelay: 2.5
   spawnDelayMin: 1
   spawnDelayMax: 4
   spawnXValue: 9
   spawnYValue: 4
+  spawnXValueMin: 9
+  spawnXValueMax: 9
+  spawnYValueMin: -4
+  spawnYValueMax: 4
