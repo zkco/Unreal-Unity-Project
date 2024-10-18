@@ -346,9 +346,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 88304029352033310, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1832634966}
-    - targetCorrespondingSourceObject: {fileID: 88304029352033310, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1832634968}
     - targetCorrespondingSourceObject: {fileID: 88304029352033310, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
       insertIndex: -1
@@ -926,18 +923,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 88304029352033310, guid: 8e8f9040ce52df14bb0bdef7d884f2be, type: 3}
   m_PrefabInstance: {fileID: 309424436}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1832634966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832634959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd19f0b9cbc562448345c52861f50a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1832634967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,6 +1420,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
+--- !u!1001 &5186591930839901237
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.768748
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.2448826
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.4077487
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257910203192332221, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5229414105090472592, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: m_Name
+      value: GameOverChecker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1449,3 +1491,4 @@ SceneRoots:
   - {fileID: 2133036}
   - {fileID: 1404546958}
   - {fileID: 742729910}
+  - {fileID: 5186591930839901237}
