@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7480876965560147808}
   - component: {fileID: 8872949921732957033}
   - component: {fileID: 7141886173911743832}
-  - component: {fileID: 3531083268709350048}
-  - component: {fileID: 4824647602707056963}
+  - component: {fileID: 3056561310245688476}
+  - component: {fileID: 8900414086946681686}
+  - component: {fileID: 6088198550752796468}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -67,11 +68,17 @@ MonoBehaviour:
     size: 5
   - tag: Bullet
     prefab: {fileID: 1922340094668504, guid: d4ab0aea4d17bac409845f00c1ebdd90, type: 3}
-    size: 20
+    size: 10
+  - tag: PlayerBullet
+    prefab: {fileID: 1922340094668504, guid: 93946a7831817144db0e8608ae728057, type: 3}
+    size: 7
+  - tag: Stone
+    prefab: {fileID: 8440859819207680437, guid: 2fad074a51754dc40a6da7dbed569fcc, type: 3}
+    size: 3
   - tag: BigBullet
-    prefab: {fileID: 1917497354682572, guid: 645cddfce9491794cb1858a5d0c30d10, type: 3}
-    size: 20
---- !u!114 &3531083268709350048
+    prefab: {fileID: 1922340094668504, guid: 1f07b7613f722c840864ababa68dfc8a, type: 3}
+    size: 10
+--- !u!114 &3056561310245688476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreTMP: {fileID: 0}
---- !u!114 &4824647602707056963
+--- !u!114 &8900414086946681686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,3 +104,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeTMP: {fileID: 0}
+--- !u!114 &6088198550752796468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88304029352033310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2443eb803bb40914bb53d81a35d872c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolTag: Stone
+  spawnType: 2
+  spawnDelay: 5
+  spawnDelayMin: 0
+  spawnDelayMax: 0
+  spawnXValue: 0
+  spawnYValue: 0
+  spawnXValueMin: -5.1
+  spawnXValueMax: 0
+  spawnYValueMin: -4.5
+  spawnYValueMax: 4.5

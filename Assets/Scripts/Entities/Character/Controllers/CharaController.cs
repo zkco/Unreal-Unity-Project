@@ -9,14 +9,17 @@ public class CharaController : MonoBehaviour
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnAimEvent;
     public event Action OnFireEvent;
+    public event Action OnDeath;
 
     private float timeSinceLastAttack = float.MaxValue;
+    protected bool isDead;
     protected bool IsFiring { get; set; }
 
     protected CharaStatHandler stats;
 
     protected virtual void Awake()
     {
+        isDead = false;
         stats = GetComponent<CharaStatHandler>();
     }
 
@@ -36,6 +39,7 @@ public class CharaController : MonoBehaviour
         {
             timeSinceLastAttack = 0;
             CallOnFireEvent();
+            IsFiring = false;
         }
     }
 
@@ -52,5 +56,11 @@ public class CharaController : MonoBehaviour
     protected void CallOnFireEvent()
     {
         OnFireEvent?.Invoke();
+    }
+
+    public void CallOnDeathEvent()
+    {
+        OnDeath?.Invoke();
+        isDead = true;
     }
 }

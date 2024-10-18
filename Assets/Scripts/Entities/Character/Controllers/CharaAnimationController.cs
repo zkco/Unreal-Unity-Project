@@ -7,23 +7,17 @@ public class CharaAnimationController : AnimationController
     private static readonly int isDead = Animator.StringToHash("isDead");
     private static readonly int Fire = Animator.StringToHash("fire");
 
-    private CharaHealthController healthController;
-
     protected override void Awake()
     {
         base.Awake();
-        healthController = GetComponent<CharaHealthController>();
+        controller = GetComponent<CharaController>();
     }
 
     private void Start()
     {
         controller.OnMoveEvent += Move;
         controller.OnFireEvent += Shoot;
-
-        if (healthController != null)
-        {
-            healthController.OnDeath += Die;
-        }
+        controller.OnDeath += Die;
     }
 
     private void Move(Vector2 vector)
@@ -39,5 +33,10 @@ public class CharaAnimationController : AnimationController
     private void Die()
     {
         animator.SetBool(isDead, true);
+    }
+
+    private void Revive()
+    {
+        animator.SetBool(isDead, false);
     }
 }

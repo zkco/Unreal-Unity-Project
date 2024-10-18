@@ -6,9 +6,8 @@ public class CharaShooting : MonoBehaviour
     private CharaController controller;
 
     [SerializeField] private Transform bulletSpawnPoint;
+    [SerializeField] private string bulletTag;
     private Vector2 aimeDirection = Vector2.right;
-
-    // public GameObject Prefab;
 
     private void Awake()
     {
@@ -27,7 +26,7 @@ public class CharaShooting : MonoBehaviour
 
     private void CreateBullet()
     {
-        GameObject obj = GameManager.Instance.objectPool.SpawningPool("Bullet");
+        GameObject obj = GameManager.Instance.objectPool.SpawningPool(bulletTag);
 
         obj.transform.position = bulletSpawnPoint.position;
         obj.transform.rotation = bulletSpawnPoint.rotation;

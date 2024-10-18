@@ -12,7 +12,7 @@ public class CharaHealthController : MonoBehaviour
     public event Action OnDeath;
     public event Action OnDamage;
 
-    public float CurrentHP {  get; private set; }
+    public float CurrentHP {get; private set; }
 
     public float MaxHP => stats.stat.MaxHP;
 
@@ -23,7 +23,7 @@ public class CharaHealthController : MonoBehaviour
 
     private void Start()
     {
-        CurrentHP = stats.stat.HP;
+        CurrentHP = stats.CurrentHP;
     }
 
     public bool ChangeHealth(float change)

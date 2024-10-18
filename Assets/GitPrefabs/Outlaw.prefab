@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 1505412187872338}
   - component: {fileID: 3657937581753938767}
   - component: {fileID: 2514479423378594943}
+  - component: {fileID: 1717377121098403631}
   m_Layer: 7
   m_Name: Outlaw
   m_TagString: Enemy
@@ -312,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 8286668644810366895}
+  bulletTag: Bullet
 --- !u!114 &2514479423378594943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,3 +327,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: 4023012a7b1984648a369115a865b229, type: 2}
+  CurrentHP: 0
+--- !u!114 &1717377121098403631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211864991512264667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dc3c79fdaf7d943b85d4f42bbe1f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

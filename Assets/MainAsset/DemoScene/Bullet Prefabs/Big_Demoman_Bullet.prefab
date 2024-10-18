@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 50577898386675116}
   - component: {fileID: -1479449649737698239}
   - component: {fileID: 8328520865089275741}
+  - component: {fileID: 4419384733223000266}
   m_Layer: 0
   m_Name: Big_Demoman_Bullet
   m_TagString: Bullet
@@ -163,3 +164,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.01}
   serializedVersion: 2
   m_Radius: 0.08
+--- !u!114 &4419384733223000266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922340094668504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7626a2823182854cb919ddf1ce3b96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayerName: Player

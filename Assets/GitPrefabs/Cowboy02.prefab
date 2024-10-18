@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 8220774995017725195}
-  Prefab: {fileID: 1922340094668504, guid: d4ab0aea4d17bac409845f00c1ebdd90, type: 3}
+  bulletTag: PlayerBullet
 --- !u!114 &5868503568634447003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: 04647adb7c442d6489361281b7d5f563, type: 2}
+  CurrentHP: 0
 --- !u!114 &1354088266642254871
 MonoBehaviour:
   m_ObjectHideFlags: 0
