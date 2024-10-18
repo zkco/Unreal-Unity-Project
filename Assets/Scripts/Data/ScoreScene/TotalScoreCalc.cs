@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class TotalScoreCalc : MonoBehaviour
 {
@@ -27,6 +24,8 @@ public class TotalScoreCalc : MonoBehaviour
     {
         _time = (int)TimeCalc._time;
         _score = ScoreCalc.Score;
+
+        SaveLoad.SaveScore(_time * 3 + _score);
 
         _tmpTime.text = _time.ToString();
         _tmpScore.text = _score.ToString();
