@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameoverChecker : MonoBehaviour
 {
     private CharaController playerController;
+    private Barricade barricade;
 
     private string playerTag = "Player";
+
     private void Start()
     {
         playerController = GameObject.FindGameObjectWithTag(playerTag).GetComponent<CharaController>();
+        barricade = GameObject.FindGameObjectWithTag("Finish").GetComponent<Barricade>();
     }
 
     void Update()
@@ -38,6 +41,10 @@ public class GameoverChecker : MonoBehaviour
 
     bool CheckBarricate()
     {
+        if (barricade != null)
+        {
+            if(barricade.isTouched == true) return true;
+        }
         return false;
     }
 

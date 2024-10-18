@@ -57,7 +57,7 @@ public class EnamyCharaController : CharaController
     {
         if (collision.gameObject.tag == "Finish")
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }
