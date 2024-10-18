@@ -17,7 +17,7 @@ public class OutlawSpawner : MonoBehaviour
 
     private void Start()
     {
-        spawnDelay = 2f; // 스폰 간격 설정 (1초)
+        spawnDelay = 1f; // 스폰 간격 설정 (1초)
         StartCoroutine(SpawnOutlaws());
     }
 
