@@ -44,6 +44,10 @@ public class BulletHit : MonoBehaviour
         if (collisionStat?.CurrentHP <= 0)
         {
             collisionControl.CallOnDeathEvent();
+            if(collision.gameObject.tag == "Enemy")
+            {
+                // TODO 점수 변동 추가
+            }
         }
     }
 
