@@ -7,8 +7,8 @@ public class OutlawSpawner : MonoBehaviour
     private float spawnDelay; // 스폰 간격
 
     [Header("Spawn Settings")]
-    public int normalSpawnAmount = 3; // 노말 난이도에서 생성할 적의 수
-    public int hardSpawnAmount = 5; // 하드 난이도에서 생성할 적의 수
+    public int normalSpawnAmount = 4; // 노말 난이도에서 생성할 적의 수
+    public int hardSpawnAmount = 8; // 하드 난이도에서 생성할 적의 수
 
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class OutlawSpawner : MonoBehaviour
 
     private void Start()
     {
-        spawnDelay = 1f; // 스폰 간격 설정 (1초)
+        spawnDelay = 2f; // 스폰 간격 설정 (1초)
         StartCoroutine(SpawnOutlaws());
     }
 
