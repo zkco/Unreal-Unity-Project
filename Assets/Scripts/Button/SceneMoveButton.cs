@@ -22,7 +22,14 @@ public class SceneMoveButton : MonoBehaviour
     public void ChangeScene()
     {
         SceneManager.LoadScene(sceneName.ToString());
-        if(scene == "MainScene") GameManager.Instance.isPlaying = true;
-        else GameManager.Instance.isPlaying = false;
+        if(scene == null)
+        {
+            return;
+        }
+        else
+        {
+            if (scene == "MainScene") GameManager.Instance.isPlaying = true;
+            else GameManager.Instance.isPlaying = false;
+        }
     }
 }
