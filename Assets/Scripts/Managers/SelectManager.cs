@@ -6,7 +6,7 @@ public class SelectManager : MonoBehaviour
 {
     public static SelectManager instance;
 
-    public int charactorID;
+    public static int charactorID;
     public GameObject[] charactors;
 
     private void Awake()
