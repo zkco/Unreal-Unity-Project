@@ -540,6 +540,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8720519907958731527, guid: 6d35949b2bc6c99418a69da26bba718b, type: 3}
   m_PrefabInstance: {fileID: 1020403082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020403084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6387783410781851586, guid: 6d35949b2bc6c99418a69da26bba718b, type: 3}
+  m_PrefabInstance: {fileID: 1020403082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020403083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cdfa7b9a1d3f84689f1f8f63b1cd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1027598164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -710,6 +721,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6820851823760252320, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
   m_PrefabInstance: {fileID: 1318509367}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1318509369 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4882939176307248296, guid: c0caf1f8d3e6c794f8106c972c12675b, type: 3}
+  m_PrefabInstance: {fileID: 1318509367}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318509368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cdfa7b9a1d3f84689f1f8f63b1cd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404546954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1269,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1743960398922146322, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: cowboy01Controller
+      value: 
+      objectReference: {fileID: 1020403084}
+    - target: {fileID: 1743960398922146322, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
+      propertyPath: cowboy02Controller
+      value: 
+      objectReference: {fileID: 1318509369}
     - target: {fileID: 5229414105090472592, guid: 0dab155e20d4791458b2d268ef85f680, type: 3}
       propertyPath: m_Name
       value: GameOverChecker

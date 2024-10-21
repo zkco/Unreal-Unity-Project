@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameoverChecker : MonoBehaviour
 {
-    private CharaController playerController;
+    [SerializeField]private CharaController cowboy01Controller;
+    [SerializeField]private CharaController cowboy02Controller;
     private Barricade barricade;
 
     private string playerTag = "Player";
 
     private void Start()
     {
-        playerController = GameObject.FindGameObjectWithTag(playerTag).GetComponent<CharaController>();
         barricade = GameObject.FindGameObjectWithTag("Finish").GetComponent<Barricade>();
     }
 
@@ -32,9 +32,10 @@ public class GameoverChecker : MonoBehaviour
 
     bool CheckPlayer()
     {
-        if (playerController != null)
+        
+        if (cowboy01Controller != null || cowboy02Controller !=null)
         {
-            if(playerController.isDead == true) return true;
+            if(cowboy01Controller.isDead == true || cowboy02Controller.isDead == true) return true;
         }
         return false;
     }
