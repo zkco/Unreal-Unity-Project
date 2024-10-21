@@ -949,7 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cowboy2
+  m_Text: Cowboy1
 --- !u!222 &965932213
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1804,7 +1804,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cowboy1
+  m_Text: Cowboy2
 --- !u!222 &1926544768
 CanvasRenderer:
   m_ObjectHideFlags: 0
