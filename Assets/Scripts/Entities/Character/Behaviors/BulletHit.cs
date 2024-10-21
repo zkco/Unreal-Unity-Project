@@ -23,18 +23,8 @@ public class BulletHit : MonoBehaviour
 
         if (collision.gameObject.layer == LayerMask.NameToLayer(targetLayerName))
         {
-            switch (collision.gameObject.tag)
-            {
-                case "Enemy":
-                    collisionStat.CurrentHP -= bullet.damage;
-                    RemoveBullet();
-                    break;
-
-                case "Player":
-                    collisionStat.CurrentHP -= bullet.damage;
-                    RemoveBullet();
-                    break;
-            }
+            collisionStat.CurrentHP -= bullet.damage;
+            RemoveBullet();
         }
         else if (collision.gameObject.tag == "BulletRemover")
         {
