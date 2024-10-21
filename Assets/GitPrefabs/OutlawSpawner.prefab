@@ -47,7 +47,7 @@ MonoBehaviour:
   PoolTag: Outlaw
   spawnType: 2
   spawnDelay: 3
-  spawnDelayMin: 2
+  spawnDelayMin: 2.5
   spawnDelayMax: 5
   spawnXValue: 0
   spawnYValue: 0
