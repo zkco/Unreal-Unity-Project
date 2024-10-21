@@ -16,4 +16,4 @@ MonoBehaviour:
   MaxHP: 1
   Speed: 3
   ShootDelay: 2
-  score: 100
+  score: 1
